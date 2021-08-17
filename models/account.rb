@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
+# models/account.rb
 class Account < Sequel::Model
+  one_to_many :posts
 
   plugin :validation_helpers
 
