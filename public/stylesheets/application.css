@@ -1,0 +1,20 @@
+.hero-body {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+h3.has-text-centered {
+  color: #363636;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+  margin-bottom: 1.5rem;
+}
+
+.articles {
+  margin: 5rem 0;
+  margin-top: 5rem;
+  margin-top: -200px;
+}
