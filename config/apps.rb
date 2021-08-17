@@ -30,7 +30,17 @@ Padrino.configure_apps do
   set :session_secret, '1ed883f9bc33a16394bf01ef4fdcbf564f9d6893de8a7ac484ab170c0de08344'
   set :protection, :except => :path_traversal
   set :protect_from_csrf, true
+
+  if RACK_ENV == 'production'
+    disable :reload
+    disable :reload_templates
+  else
+    enable :reload
+    enable :reload_templates
+  end
 end
 
 # Mounts the core application for this project
+
+Padrino.mount("BlogTutorial::Admin", :app_file => Padrino.root('admin/app.rb')).to("/admin")
 Padrino.mount('BlogTutorial::App', :app_file => Padrino.root('app/app.rb')).to('/')

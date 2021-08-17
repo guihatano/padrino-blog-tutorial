@@ -5,3 +5,9 @@
 ```shell
 bundle
 ```
+
+## Running the server
+
+```shell
+padrino s
+```

@@ -5,6 +5,15 @@ module BlogTutorial
     register Padrino::Helpers
     enable :sessions
 
+    # Here are the defined routes
+    get '/' do
+      'Hello World!'
+    end
+
+    get :about, map: '/about-us' do
+      render :haml, '%p This is a sample blog created to demonstrate how Padrino works!'
+    end
+
     ##
     # Caching support.
     #
