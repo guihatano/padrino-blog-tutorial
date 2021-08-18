@@ -7,7 +7,7 @@ module BlogTutorial
 
     # Here are the defined routes
     get '/' do
-      'Hello World!'
+      { message: 'Hello World!' }.to_json
     end
 
     get :about, map: '/about-us' do

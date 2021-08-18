@@ -19,3 +19,7 @@ bundle exec rake db:seed
 ```shell
 padrino s
 ```
+
+## Some tests made
+
+See [Requests-tests.md](Requests-tests.md)
